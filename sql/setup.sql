@@ -9,9 +9,11 @@ CREATE TABLE ventures (
 	id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     venture_id TEXT NOT NULL UNIQUE,
     venture_title TEXT NOT NULL,
-    host_email TEXT NOT NULL UNIQUE,
+    venture_name TEXT NOT NULL,
+    host_email TEXT NOT NULL,
     host_fname TEXT NOT NULL,
     host_image TEXT, 
+    host_audio TEXT,
     chat json,
     participants json 
 
@@ -20,11 +22,10 @@ CREATE TABLE ventures (
 CREATE TABLE users (
 id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
 fname TEXT, 
-user_email TEXT NOT NULL,
-profile_image TEXT,
-venture_ref TEXT NOT NULL REFERENCES ventures(venture_id)
+user_email TEXT NOT NULL UNIQUE,
+profile_image TEXT
+-- venture_ref TEXT NOT NULL REFERENCES ventures(venture_id)
 );
 
 
-INSERT INTO ventures (venture_id, venture_title, host_email, host_fname, chat, participants ) VALUES('someVentureID', 'someVentureTitle', 'someEmail@email.com', 'Bill','[{ "customer": "John Doe", "items": {"product": "Beer","qty": 6}}]', '{"host":"Bill"}' );
-INSERT INTO users ( user_email, venture_ref, fname) VALUES ('someEmail@email.com', 'someVentureID', 'Bill');
+INSERT INTO ventures (venture_id, venture_title, venture_name, host_email, host_fname, chat, participants ) VALUES('TOM&POTATOES','POTATOES', 'potatoes', 'TOM@EMAIL.COM', 'TOM','[{"msg":"i need coffee :)","time":"April 1, 2022 1:06 AM","message":"i need coffee :)","username":"TOM","pillarOne":"Diverge","pillarTwo":"Solution","ventureId":"TOM&POTATOES"}]', '["tom@gmail.com", "sara@gmail.com", "perez.evon@gmail.com"]' );
