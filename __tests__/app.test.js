@@ -1,7 +1,7 @@
 const pool = require('../lib/utils/pool');
 const setup = require('../data/setup');
-const request = require('supertest');
-const app = require('../lib/app');
+// const request = require('supertest');
+// const app = require('../lib/app');
 
 
 describe('venture-chat-be routes', () => {
@@ -135,44 +135,44 @@ describe('venture-chat-be routes', () => {
 
   // });
 
-    it('adds a new user', async () => {
-    const res = await request(app).post('/api/v1/ventures/newuser').send({firstName:'EVON', email:'perez.evon@gmail.com'});
+  //   it('adds a new user', async () => {
+  //   const res = await request(app).post('/api/v1/ventures/newuser').send({firstName:'EVON', email:'perez.evon@gmail.com'});
 
-    expect(true).toEqual(true);
+  //   expect(true).toEqual(true);
 
-  });
-  it('adds a new user', async () => {
-    const res = await request(app).post('/api/v1/ventures/newuser').send({firstName:'Sara', email:'sara@gmail.com'});
+  // });
+  // it('adds a new user', async () => {
+  //   const res = await request(app).post('/api/v1/ventures/newuser').send({firstName:'Sara', email:'sara@gmail.com'});
 
-    expect(true).toEqual(true);
+  //   expect(true).toEqual(true);
 
-  });
-  it('adds a new user', async () => {
-    const res = await request(app).post('/api/v1/ventures/newuser').send({firstName:'TOM', email:'tom@gmail.com'});
+  // });
+  // it('adds a new user', async () => {
+  //   const res = await request(app).post('/api/v1/ventures/newuser').send({firstName:'TOM', email:'tom@gmail.com'});
 
-    expect(true).toEqual(true);
+  //   expect(true).toEqual(true);
 
-  });
-  it('adds a new user', async () => {
-    const res = await request(app).post('/api/v1/ventures/newuser').send({firstName:'TOM', email:'tom@gmail.com'});
-    console.log('he exist', res.body)
-    expect(true).toEqual(true);
+  // });
+  // it('adds a new user', async () => {
+  //   const res = await request(app).post('/api/v1/ventures/newuser').send({firstName:'TOM', email:'tom@gmail.com'});
+  //   // console.log('he exist', res.body)
+  //   expect(true).toEqual(true);
 
-  });
+  // });
 
 
-  it('gets a  user', async () => {
-    const res = await request(app).post('/api/v1/ventures/user').send({email:'perez.evon@gmail.com'});
-    console.log('MArio', res.body)
-    expect(true).toEqual(true);
+  // it('gets a  user', async () => {
+  //   const res = await request(app).post('/api/v1/ventures/user').send({email:'perez.evon@gmail.com'});
+  //   console.log('MArio', res.body)
+  //   expect(true).toEqual(true);
 
-  });
-  it('gets all users from array', async () => {
-    const res = await request(app).post('/api/v1/ventures/allusers').send({ participants:['tom@gmail.com', 'sara@gmail.com', 'perez.evon@gmail.com'] });
-    console.log('LUIGI', res.body);
-    expect(true).toEqual(true);
+  // });
+  // it('gets all users from array', async () => {
+  //   const res = await request(app).post('/api/v1/ventures/allusers').send({ participants:['tom@gmail.com', 'sara@gmail.com', 'perez.evon@gmail.com'] });
+  //   console.log('LUIGI', res.body);
+  //   expect(true).toEqual(true);
 
-  });
+  // });
 
   afterAll(() => {
     pool.end();
