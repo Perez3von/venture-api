@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 7890;
 app.listen(PORT, () => {
   console.log(`🚀  Server started on ${API_URL}:${PORT}`);
 });
-
+//cons
 process.on('exit', () => {
   console.log('👋  Goodbye!');
   pool.end();
