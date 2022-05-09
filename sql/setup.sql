@@ -10,6 +10,7 @@ CREATE TABLE ventures (
     venture_id TEXT NOT NULL UNIQUE,
     venture_title TEXT NOT NULL,
     venture_name TEXT NOT NULL,
+    venture_bio TEXT NOT NULL,
     host_email TEXT NOT NULL,
     host_fname TEXT NOT NULL,
     host_image TEXT, 
@@ -28,4 +29,4 @@ profile_image TEXT
 );
 
 
-INSERT INTO ventures (venture_id, venture_title, venture_name, host_email, host_fname, chat, participants ) VALUES('TOM&POTATOES','POTATOES', 'potatoes', 'TOM@EMAIL.COM', 'TOM','[{"msg":"i need coffee :)","time":"April 1, 2022 1:06 AM","message":"i need coffee :)","username":"TOM","pillarOne":"Diverge","pillarTwo":"Solution","ventureId":"TOM&POTATOES"}]', '["tom@gmail.com", "sara@gmail.com", "perez.evon@gmail.com"]' );
+INSERT INTO ventures (venture_id, venture_title, venture_name, venture_bio, host_email, host_fname, chat, participants ) VALUES('TOM&POTATOES','POTATOES', 'potatoes','SOME BIO', 'TOM@EMAIL.COM', 'TOM','[{"msg":"i need coffee :)","time":"April 1, 2022 1:06 AM","message":"i need coffee :)","username":"TOM","pillarOne":"Diverge","pillarTwo":"Solution","ventureId":"TOM&POTATOES"}]', '["tom@gmail.com", "sara@gmail.com", "perez.evon@gmail.com"]' );
