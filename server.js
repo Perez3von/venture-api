@@ -1,7 +1,7 @@
 const app = require('./lib/app');
 const pool = require('./lib/utils/pool');
 
-const API_URL = process.env.DATABASE_URL || 'http://localhost';
+const API_URL = process.env.API_URL || 'http://localhost';
 const PORT = process.env.PORT || 5432;
 
 app.listen(PORT, () => {
